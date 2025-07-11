@@ -37,9 +37,10 @@ Makefile*
 *.msi
 *.msm
 *.msp
-*.nsi
-LIST_installer.nsi
 LIST_Windows_Installer.exe
+
+# Ignore generated NSIS scripts, but keep the template
+LIST_installer_generated.nsi
 
 # Temporary files
 *.tmp
