@@ -27,7 +27,37 @@ These files can be also found [here](https://drive.google.com/drive/folders/1OZp
 
 ## Deployment
 
-### How to make a DMG installer for MacOSX distribution
+### Windows Deployment
+
+#### Quick Start
+1. Run `build_windows.bat` to build the application
+2. Run `deploy_windows.bat` to create a deployment package
+3. Copy the `LIST_Windows_Package` folder to target Windows systems
+
+#### Advanced Windows Deployment
+Use PowerShell for more control:
+```powershell
+# Basic deployment
+.\deploy_windows.ps1
+
+# Advanced deployment with automatic Qt detection
+.\deploy_windows.ps1 -QtPath "C:\Qt\6.5.0\msvc2019_64" -DownloadDataFiles
+
+# Create Windows installer (requires NSIS)
+.\deploy_windows.ps1 -CreateInstaller
+```
+
+#### Windows Prerequisites
+- Qt 5.15+ (or Qt 6.x recommended)
+- OpenCV 4.x (default location: `C:\opencv\build`)
+- Tesseract OCR 4.x (default location: `C:\Program Files\Tesseract-OCR`)
+- Visual Studio 2019+ (Build Tools or Community Edition)
+
+For detailed Windows installation instructions, see [WINDOWS_INSTALL.md](WINDOWS_INSTALL.md)
+
+### macOS Deployment
+
+#### How to make a DMG installer for MacOSX distribution
 
 1. use this keyword in pro: CONFIG += app_bundle
 2. run: macdeployqt LIST.app -dmg (make sure to use macdeploygt from the same QT directory)

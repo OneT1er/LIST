@@ -1,0 +1,56 @@
+# Build directories
+build/
+build-*/
+debug/
+release/
+
+# Windows deployment package
+LIST_Windows_Package/
+
+# Qt generated files
+*.pro.user
+*.pro.user.*
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+Makefile*
+*.dll
+*.exe
+*.lib
+*.exp
+*.pdb
+*.ilk
+
+# Visual Studio files
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+*.suo
+*.user
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+
+# Windows specific
+*.msi
+*.msm
+*.msp
+LIST_Windows_Installer.exe
+
+# Ignore generated NSIS scripts, but keep the template
+LIST_installer_generated.nsi
+
+# Temporary files
+*.tmp
+*.temp
+*~
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
